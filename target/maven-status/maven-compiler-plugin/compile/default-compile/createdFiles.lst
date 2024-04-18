@@ -1,6 +1,7 @@
 br\com\andrelima\projetologin\ProjetoLogin.class
-br\com\andrelima\projetologin\ViewLogin$4.class
-br\com\andrelima\projetologin\ViewLogin$1.class
-br\com\andrelima\projetologin\ViewLogin$3.class
-br\com\andrelima\projetologin\ViewLogin$2.class
-br\com\andrelima\projetologin\ViewLogin.class
+br\com\andrelima\projetologin\LoginTela$5.class
+br\com\andrelima\projetologin\LoginTela$3.class
+br\com\andrelima\projetologin\LoginTela$1.class
+br\com\andrelima\projetologin\LoginTela$4.class
+br\com\andrelima\projetologin\LoginTela.class
+br\com\andrelima\projetologin\LoginTela$2.class
