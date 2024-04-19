@@ -6,6 +6,8 @@ CREATE TABLE tb_usuario_mew_events(
   senha VARCHAR(200) NOT NULL
 );
 --cadastrar um usuário
+SELECT * FROM tb_usuario_mew_events;
+--cadastrar um usuário
 INSERT INTO tb_usuario_mew_events
 (login, senha) VALUES
 ('comum', 'comum');

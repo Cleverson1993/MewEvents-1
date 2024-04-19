@@ -6,10 +6,7 @@ package br.com.andrelima.projetologin;
 
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author andre
- */
+
 public class LoginTela extends javax.swing.JFrame {
 
     /**
@@ -134,19 +131,24 @@ public class LoginTela extends javax.swing.JFrame {
     }//GEN-LAST:event_loginTextFieldActionPerformed
 
     private void entrarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_entrarButtonActionPerformed
-        // TODO add your handling code here:
         
-        if(loginTextField.getText().equals("usuario") && new String(senhaPasswordField.getPassword()).equals("123")){
-            
-            JOptionPane.showMessageDialog(null,"Logado");
-        }else{
-             JOptionPane.showMessageDialog(null,"Usuário ou senha inválidos");
+        try{
+            String login = loginTextField.getText();
+            String senha = new String(senhaPasswordField.getPassword());
+            var usuario = new Usuario(login, senha);
+            var dao = new UsuarioDAO();
+            if(dao.existe(usuario)){
+                JOptionPane.showMessageDialog(null, "Bem vindo");
+            }
+            else{
+                JOptionPane.showMessageDialog(null, "Par usuário/senha inválido");
+            }
         }
-            
-        
-            
-            
-    }//GEN-LAST:event_entrarButtonActionPerformed
+        catch(Exception e){
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(null, "Tente novamente mais tarde");
+        }
+    }
 
     private void txtEsqueceuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEsqueceuActionPerformed
       // TODO add your handling code here:
