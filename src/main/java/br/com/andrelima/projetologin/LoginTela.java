@@ -34,7 +34,7 @@ public class LoginTela extends javax.swing.JFrame {
         txtEsqueceu = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         cancelarButton = new javax.swing.JButton();
-        jLabel4 = new javax.swing.JLabel();
+        ImagemFundo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -43,7 +43,6 @@ public class LoginTela extends javax.swing.JFrame {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Georgia", 1, 12)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 102, 102));
         jLabel1.setText("Login:");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(56, 244, 300, -1));
 
@@ -56,14 +55,13 @@ public class LoginTela extends javax.swing.JFrame {
         jPanel1.add(loginTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(56, 264, 300, 34));
 
         jLabel3.setFont(new java.awt.Font("Georgia", 1, 12)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 102, 102));
         jLabel3.setText("Senha:");
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(56, 310, 300, -1));
 
         senhaPasswordField.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jPanel1.add(senhaPasswordField, new org.netbeans.lib.awtextra.AbsoluteConstraints(56, 330, 300, 32));
 
-        entrarButton.setBackground(new java.awt.Color(255, 153, 153));
+        entrarButton.setBackground(new java.awt.Color(244, 196, 179));
         entrarButton.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         entrarButton.setText("Entrar");
         entrarButton.addActionListener(new java.awt.event.ActionListener() {
@@ -87,10 +85,9 @@ public class LoginTela extends javax.swing.JFrame {
         jLabel2.setText("jLabel2");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(151, 113, 101, -1));
 
-        cancelarButton.setBackground(new java.awt.Color(255, 153, 153));
+        cancelarButton.setBackground(new java.awt.Color(244, 196, 179));
         cancelarButton.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         cancelarButton.setText("Cancelar");
-        cancelarButton.setActionCommand("Cancelar");
         cancelarButton.setMaximumSize(new java.awt.Dimension(72, 23));
         cancelarButton.setMinimumSize(new java.awt.Dimension(72, 23));
         cancelarButton.setPreferredSize(new java.awt.Dimension(72, 23));
@@ -101,10 +98,10 @@ public class LoginTela extends javax.swing.JFrame {
         });
         jPanel1.add(cancelarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(56, 415, 100, 40));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/backgroundGrass.jpg"))); // NOI18N
-        jLabel4.setText("jLabel4");
-        jLabel4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.lightGray, java.awt.Color.lightGray, java.awt.Color.gray, java.awt.Color.gray));
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 410, 590));
+        ImagemFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/backgroundGrass.jpg"))); // NOI18N
+        ImagemFundo.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        ImagemFundo.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.lightGray, java.awt.Color.lightGray, java.awt.Color.gray, java.awt.Color.gray));
+        jPanel1.add(ImagemFundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 410, 590));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -130,7 +127,7 @@ public class LoginTela extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_loginTextFieldActionPerformed
 
-    private void entrarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_entrarButtonActionPerformed
+    private void entrarButtonActionPerformed(java.awt.event.ActionEvent evt) {                                             
         
         try{
             String login = loginTextField.getText();
@@ -195,12 +192,12 @@ public class LoginTela extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel ImagemFundo;
     private javax.swing.JButton cancelarButton;
     private javax.swing.JButton entrarButton;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField loginTextField;
     private javax.swing.JPasswordField senhaPasswordField;
