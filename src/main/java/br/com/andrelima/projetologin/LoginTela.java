@@ -26,13 +26,13 @@ public class LoginTela extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        txtLogin = new javax.swing.JLabel();
         loginTextField = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
+        txtSenha = new javax.swing.JLabel();
         senhaPasswordField = new javax.swing.JPasswordField();
         entrarButton = new javax.swing.JButton();
-        txtEsqueceu = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
+        esqueceuSenhaButton = new javax.swing.JButton();
+        iconMew = new javax.swing.JLabel();
         cancelarButton = new javax.swing.JButton();
         ImagemFundo = new javax.swing.JLabel();
 
@@ -42,9 +42,9 @@ public class LoginTela extends javax.swing.JFrame {
         jPanel1.setForeground(new java.awt.Color(51, 51, 51));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Georgia", 1, 12)); // NOI18N
-        jLabel1.setText("Login:");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(56, 244, 300, -1));
+        txtLogin.setFont(new java.awt.Font("Georgia", 1, 12)); // NOI18N
+        txtLogin.setText("Login:");
+        jPanel1.add(txtLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(56, 244, 300, -1));
 
         loginTextField.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         loginTextField.addActionListener(new java.awt.event.ActionListener() {
@@ -54,9 +54,9 @@ public class LoginTela extends javax.swing.JFrame {
         });
         jPanel1.add(loginTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(56, 264, 300, 34));
 
-        jLabel3.setFont(new java.awt.Font("Georgia", 1, 12)); // NOI18N
-        jLabel3.setText("Senha:");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(56, 310, 300, -1));
+        txtSenha.setFont(new java.awt.Font("Georgia", 1, 12)); // NOI18N
+        txtSenha.setText("Senha:");
+        jPanel1.add(txtSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(56, 310, 300, -1));
 
         senhaPasswordField.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jPanel1.add(senhaPasswordField, new org.netbeans.lib.awtextra.AbsoluteConstraints(56, 330, 300, 32));
@@ -71,19 +71,19 @@ public class LoginTela extends javax.swing.JFrame {
         });
         jPanel1.add(entrarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(256, 415, 100, 40));
 
-        txtEsqueceu.setFont(new java.awt.Font("Sitka Text", 0, 12)); // NOI18N
-        txtEsqueceu.setForeground(new java.awt.Color(0, 153, 204));
-        txtEsqueceu.setText("Esqueceu sua senha?");
-        txtEsqueceu.addActionListener(new java.awt.event.ActionListener() {
+        esqueceuSenhaButton.setFont(new java.awt.Font("Sitka Text", 0, 12)); // NOI18N
+        esqueceuSenhaButton.setForeground(new java.awt.Color(0, 153, 204));
+        esqueceuSenhaButton.setText("Esqueceu sua senha?");
+        esqueceuSenhaButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtEsqueceuActionPerformed(evt);
+                esqueceuSenhaButtonActionPerformed(evt);
             }
         });
-        jPanel1.add(txtEsqueceu, new org.netbeans.lib.awtextra.AbsoluteConstraints(56, 374, -1, -1));
+        jPanel1.add(esqueceuSenhaButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(56, 374, -1, -1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/mew_icon-icons.com_67542.png"))); // NOI18N
-        jLabel2.setText("jLabel2");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(151, 113, 101, -1));
+        iconMew.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/mew_icon-icons.com_67542.png"))); // NOI18N
+        iconMew.setText("jLabel2");
+        jPanel1.add(iconMew, new org.netbeans.lib.awtextra.AbsoluteConstraints(151, 113, 101, -1));
 
         cancelarButton.setBackground(new java.awt.Color(244, 196, 179));
         cancelarButton.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -147,9 +147,9 @@ public class LoginTela extends javax.swing.JFrame {
         }
     }
 
-    private void txtEsqueceuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEsqueceuActionPerformed
+    private void esqueceuSenhaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_esqueceuSenhaButtonActionPerformed
       // TODO add your handling code here:
-    }//GEN-LAST:event_txtEsqueceuActionPerformed
+    }//GEN-LAST:event_esqueceuSenhaButtonActionPerformed
 
     private void cancelarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelarButtonActionPerformed
         dispose();
@@ -195,12 +195,12 @@ public class LoginTela extends javax.swing.JFrame {
     private javax.swing.JLabel ImagemFundo;
     private javax.swing.JButton cancelarButton;
     private javax.swing.JButton entrarButton;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
+    private javax.swing.JButton esqueceuSenhaButton;
+    private javax.swing.JLabel iconMew;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField loginTextField;
     private javax.swing.JPasswordField senhaPasswordField;
-    private javax.swing.JButton txtEsqueceu;
+    private javax.swing.JLabel txtLogin;
+    private javax.swing.JLabel txtSenha;
     // End of variables declaration//GEN-END:variables
 }
