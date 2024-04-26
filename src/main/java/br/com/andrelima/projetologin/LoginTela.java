@@ -31,7 +31,7 @@ public class LoginTela extends javax.swing.JFrame {
         txtSenha = new javax.swing.JLabel();
         senhaPasswordField = new javax.swing.JPasswordField();
         entrarButton = new javax.swing.JButton();
-        esqueceuSenhaButton = new javax.swing.JButton();
+        criarContaButton = new javax.swing.JButton();
         iconMew = new javax.swing.JLabel();
         cancelarButton = new javax.swing.JButton();
         ImagemFundo = new javax.swing.JLabel();
@@ -71,15 +71,15 @@ public class LoginTela extends javax.swing.JFrame {
         });
         jPanel1.add(entrarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(256, 415, 100, 40));
 
-        esqueceuSenhaButton.setFont(new java.awt.Font("Sitka Text", 0, 12)); // NOI18N
-        esqueceuSenhaButton.setForeground(new java.awt.Color(0, 153, 204));
-        esqueceuSenhaButton.setText("Esqueceu sua senha?");
-        esqueceuSenhaButton.addActionListener(new java.awt.event.ActionListener() {
+        criarContaButton.setFont(new java.awt.Font("Sitka Text", 0, 12)); // NOI18N
+        criarContaButton.setForeground(new java.awt.Color(0, 153, 204));
+        criarContaButton.setText("Criar conta");
+        criarContaButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                esqueceuSenhaButtonActionPerformed(evt);
+                criarContaButtonActionPerformed(evt);
             }
         });
-        jPanel1.add(esqueceuSenhaButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(56, 374, -1, -1));
+        jPanel1.add(criarContaButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(56, 374, 100, -1));
 
         iconMew.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/mew_icon-icons.com_67542.png"))); // NOI18N
         iconMew.setText("jLabel2");
@@ -135,7 +135,8 @@ public class LoginTela extends javax.swing.JFrame {
             var usuario = new Usuario(login, senha);
             var dao = new UsuarioDAO();
             if(dao.existe(usuario)){
-                JOptionPane.showMessageDialog(null, "Bem vindo");
+                HomePage pi = new HomePage();
+                pi.setVisible(true);
             }
             else{
                 JOptionPane.showMessageDialog(null, "Par usuário/senha inválido");
@@ -147,9 +148,10 @@ public class LoginTela extends javax.swing.JFrame {
         }
     }
 
-    private void esqueceuSenhaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_esqueceuSenhaButtonActionPerformed
-      // TODO add your handling code here:
-    }//GEN-LAST:event_esqueceuSenhaButtonActionPerformed
+    private void criarContaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_criarContaButtonActionPerformed
+      CadastroUsuarioTela pi = new CadastroUsuarioTela();
+      pi.setVisible(true);
+    }//GEN-LAST:event_criarContaButtonActionPerformed
 
     private void cancelarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelarButtonActionPerformed
         dispose();
@@ -194,8 +196,8 @@ public class LoginTela extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel ImagemFundo;
     private javax.swing.JButton cancelarButton;
+    private javax.swing.JButton criarContaButton;
     private javax.swing.JButton entrarButton;
-    private javax.swing.JButton esqueceuSenhaButton;
     private javax.swing.JLabel iconMew;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField loginTextField;
