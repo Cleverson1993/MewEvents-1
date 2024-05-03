@@ -25,10 +25,6 @@ public class UsuarioDAO {
         rs.close();
         ps.close();
         conexao.close();
-//        if(usuarioExiste)
-//            return true;
-//        return false;
-//        return usuarioExiste ? true : false;
           return usuarioExiste;
     }
     
