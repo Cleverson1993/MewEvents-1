@@ -8,7 +8,8 @@ public class Usuario {
     private int codigo;
     private String login;
     private String senha;
-
+    private int tipo;
+    
     //construtor padrão
     Usuario(){}
     
@@ -16,7 +17,7 @@ public class Usuario {
         this.login = login;
         this.senha = senha;
     }
-
+    
     public String getLogin(){
         return login;
     }
@@ -24,4 +25,13 @@ public class Usuario {
     public String getSenha() {
         return senha;
     }
+
+    public int getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(int tipo) {
+        this.tipo = tipo;
+    }
+    
 }

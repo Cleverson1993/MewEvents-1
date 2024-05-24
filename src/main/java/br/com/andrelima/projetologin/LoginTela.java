@@ -120,26 +120,29 @@ public class LoginTela extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_loginTextFieldActionPerformed
 
-    private void entrarButtonActionPerformed(java.awt.event.ActionEvent evt) {                                             
-        
-        try{
-            String login = loginTextField.getText();
-            String senha = new String(senhaPasswordField.getPassword());
-            var usuario = new Usuario(login, senha);
-            var dao = new UsuarioDAO();
-            if(dao.existe(usuario)){
-                this.setVisible(false);
+   private void entrarButtonActionPerformed(java.awt.event.ActionEvent evt) {                                             
+    try {
+        String login = loginTextField.getText();
+        String senha = new String(senhaPasswordField.getPassword());
+        var usuario = new Usuario(login, senha);
+        var dao = new UsuarioDAO();
+        if (dao.existe(usuario)) {
+            this.setVisible(false);
+            if (usuario.getTipo() == 1) {
                 new AdminTela().setVisible(true);
+            } else if (usuario.getTipo() == 2) {
+                new ComumTela().setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Tipo de usuário inválido");
             }
-            else{
-                JOptionPane.showMessageDialog(null, "Par usuário/senha inválido");
-            }
+        } else {
+            JOptionPane.showMessageDialog(null, "Par usuário/senha inválido");
         }
-        catch(Exception e){
-            e.printStackTrace();
-            JOptionPane.showMessageDialog(null, "Tente novamente mais tarde");
-        }
+    } catch (Exception e) {
+        e.printStackTrace();
+        JOptionPane.showMessageDialog(null, "Tente novamente mais tarde");
     }
+}
 
     private void criarContaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_criarContaButtonActionPerformed
       this.setVisible(false);
