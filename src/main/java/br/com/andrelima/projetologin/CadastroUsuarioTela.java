@@ -9,6 +9,7 @@ public class CadastroUsuarioTela extends javax.swing.JFrame {
 
     public CadastroUsuarioTela() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     @SuppressWarnings("unchecked")

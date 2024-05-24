@@ -11,6 +11,7 @@ public class LoginTela extends javax.swing.JFrame {
 
     public LoginTela() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     @SuppressWarnings("unchecked")
@@ -128,7 +129,7 @@ public class LoginTela extends javax.swing.JFrame {
             var dao = new UsuarioDAO();
             if(dao.existe(usuario)){
                 this.setVisible(false);
-                new HomePage().setVisible(true);
+                new AdminTela().setVisible(true);
             }
             else{
                 JOptionPane.showMessageDialog(null, "Par usuário/senha inválido");
