@@ -3,24 +3,38 @@
 CREATE TABLE tb_usuario_mew_events(
   cod_usuario SERIAL PRIMARY KEY,
   login VARCHAR(200) NOT NULL,
-  senha VARCHAR(200) NOT NULL
+  senha VARCHAR(200) NOT NULL,
+  tipo INT
 );
---cadastrar um usuário
+INSERT INTO tb_usuario_mew_events (login, senha, tipo)
+VALUES
+('admin', 'admin', 1),
+('comum', 'comum', 2);
+
 SELECT * FROM tb_usuario_mew_events;
---cadastrar um usuário
-INSERT INTO tb_usuario_mew_events
-(login, senha) VALUES
-('comum', 'comum');
 
-SELECT  *
-FROM tb_usuario_mew_events;
+CREATE TABLE tb_evento_mew_events(
+  cod_evento SERIAL PRIMARY KEY,
+  nome VARCHAR(200) NOT NULL,
+  descricao VARCHAR(1000) NOT NULL,
+  data_inicio TIMESTAMP NOT NULL,
+  data_fim TIMESTAMP NOT NULL
+);
 
-UPDATE tb_usuario_mew_events SET
-login='Admin',senha='Admin'
-WHERE cod_usuario = 1;
+INSERT INTO tb_evento_mew_events
+(nome, descricao, data_inicio, data_fim)
+VALUES
+(
+  'Evento1', 
+  'Esse é o evento 1', 
+  CURRENT_TIMESTAMP,
+  CURRENT_TIMESTAMP
+),
+(
+  'Evento 2',
+  'Esse é o evento 2',
+  CURRENT_TIMESTAMP,
+  CURRENT_TIMESTAMP
+);
 
-DELETE FROM tb_usuario_mew_events
-WHERE cod_usuario = 2;
-
-UPDATE tb_usuario_mew_events SET
-senha='' WHERE cod_usuario = 1;
+SELECT * FROM tb_evento_mew_events;
