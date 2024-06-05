@@ -5,7 +5,6 @@
 package br.com.andrelima.projetologin;
 
 import javax.swing.JOptionPane;
-import javax.swing.table.DefaultTableColumnModel;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -149,7 +148,7 @@ public class AdminTela extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Evento", "Data", "Endereço", "Contato", "E-mail"
+                "Evento", "Data", "Endereço", "Telefone", "E-mail"
             }
         ) {
             boolean[] canEdit = new boolean [] {
