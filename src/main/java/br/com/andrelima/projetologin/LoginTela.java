@@ -132,9 +132,7 @@ public class LoginTela extends javax.swing.JFrame {
                 new AdminTela().setVisible(true);
             } else if (usuario.getTipo() == 2) {
                 new ComumTela().setVisible(true);
-            } else {
-                JOptionPane.showMessageDialog(null, "Tipo de usuário inválido");
-            }
+            } 
         } else {
             JOptionPane.showMessageDialog(null, "Par usuário/senha inválido");
         }
