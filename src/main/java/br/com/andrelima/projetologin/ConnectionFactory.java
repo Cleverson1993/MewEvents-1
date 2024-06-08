@@ -8,10 +8,10 @@ import java.sql.DriverManager;
 
 
 public class ConnectionFactory {
-    String host = "pg-851c6d3-mew-events.d.aivencloud.com";
-    String port = "10225";
+    String host = "pg-c905974-projeto01.b.aivencloud.com";
+    String port = "21243";
     String user = "avnadmin";
-    String password = "AVNS_92KZndcw5mxRsRheLY4";
+    String password = "************************"; 
     String database = "defaultdb";
     
     //4 partes: tipo de retorno, nome, lista de parâmetros e corpo
